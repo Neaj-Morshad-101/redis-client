@@ -44,13 +44,13 @@ func initRedis() {
 }
 
 func main() {
-	////Initialize Redis client
-	//initRedis()
-	//
-	//fmt.Println("CheckWithClient().......")
-	//CheckWithClient(redisClient)
-	//fmt.Println("RedisClientWithURI().......")
-	//CheckWithClient(RedisClientWithURI())
+	//Initialize Redis client
+	initRedis()
+
+	fmt.Println("CheckWithClient().......")
+	CheckWithClient(redisClient)
+	fmt.Println("RedisClientWithURI().......")
+	CheckWithClient(RedisClientWithURI())
 
 	// Initialize the scheme to include KubeDB API group
 	if err := v1.AddToScheme(scheme.Scheme); err != nil {
